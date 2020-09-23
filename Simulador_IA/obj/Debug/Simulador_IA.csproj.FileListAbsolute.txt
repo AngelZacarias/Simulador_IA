@@ -1,0 +1,16 @@
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\bin\Debug\Simulador_IA.exe.config
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\bin\Debug\Simulador_IA.exe
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\bin\Debug\Simulador_IA.pdb
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.csprojAssemblyReference.cache
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\MainWindow.g.cs
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\App.g.cs
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA_MarkupCompile.cache
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA_MarkupCompile.lref
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\MainWindow.baml
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.g.resources
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.Properties.Resources.resources
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.csproj.GenerateResource.cache
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.csproj.CoreCompileInputs.cache
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.exe
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.pdb
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA_Content.g.cs
