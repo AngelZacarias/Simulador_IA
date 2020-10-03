@@ -1,0 +1,22 @@
+﻿<Window x:Class="Simulador_IA.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simulador_IA"
+        mc:Ignorable="d"
+        Title="Window1" Height="510.8" Width="357.6" WindowStyle="None" >
+    <Grid Width="350" Height="500">
+        <DataGrid x:Name="DataGridScore" Height="340" Margin="10,65,10,0" VerticalAlignment="Top" Foreground="#FF134183">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Movements" IsReadOnly="True" Binding="{Binding Path=Movements}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Trash" IsReadOnly="True" Binding="{Binding Path=Trash}" Width="150"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Score" Margin="143,10,143,0" VerticalAlignment="Top" Height="37" FontSize="20" FontWeight="Bold" Foreground="#FF134183"/>
+        <Label x:Name="LBL_Movements" Content="Movements Average:" HorizontalAlignment="Left" Margin="4,416,0,0" VerticalAlignment="Top" Width="157" Foreground="#FF134183"/>
+        <Label x:Name="LBL_Trash" Content="Trash Average:" HorizontalAlignment="Left" Margin="183,416,0,0" VerticalAlignment="Top" Width="157" Foreground="#FF134183"/>
+        <Button x:Name="BTN_Close" Content="Close" Margin="4,0,10,10" Click="buttonClose_Click" BorderBrush="White" FontFamily="Open Sans" Foreground="#FF134183" FontSize="20" Background="{x:Null}" Height="36" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>
