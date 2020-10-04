@@ -33,7 +33,7 @@ namespace Simulador_IA
             InitializeComponent();
             
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 5); //TimeSpan(int hours, int min, int secs) Every 5 seconds do dispatcherTimer_Tick
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1); //TimeSpan(int hours, int min, int secs) Every 5 seconds do dispatcherTimer_Tick
 
             if (!File.Exists(path)) //Check if file exist
             {
@@ -66,32 +66,39 @@ namespace Simulador_IA
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (IMG_SectionA.Source == null) // if section A doesn't have the vaccum
+            if (time % 5 == 0)
             {
-                IMG_SectionB.Source = null; //Remove vaccum from section B
-                IMG_SectionA.Source = new BitmapImage(new Uri(pathApplication + "vaccum.png")); //Put vaccum in section A
-                movements++;
-                if (isSectionDirty[0]) //If section A is dirty
+                if (IMG_SectionA.Source == null) // if section A doesn't have the vaccum
                 {
-                    IMG_TrashA.Source = null;
-                    isSectionDirty[0] = false;
-                    trash++;
+                    IMG_SectionB.Source = null; //Remove vaccum from section B
+                    IMG_SectionA.Source = new BitmapImage(new Uri(pathApplication + "vaccum.png")); //Put vaccum in section A
+                    movements++;
+                    if (isSectionDirty[0]) //If section A is dirty
+                    {
+                        IMG_TrashA.Source = null;
+                        isSectionDirty[0] = false;
+                        trash++;
+                        movements++;
+                    }
+                }
+                else //if section B doesn't have the vaccum
+                {
+                    IMG_SectionA.Source = null;
+                    IMG_SectionB.Source = new BitmapImage(new Uri(pathApplication + "vaccum.png"));
+                    movements++;
+                    if (isSectionDirty[1])
+                    {
+                        IMG_TrashB.Source = null;
+                        isSectionDirty[1] = false;
+                        trash++;
+                        movements++;
+                    }
                 }
             }
-            else //if section B doesn't have the vaccum
-            {
-                IMG_SectionA.Source = null;
-                IMG_SectionB.Source = new BitmapImage(new Uri(pathApplication + "vaccum.png"));
-                movements++;
-                if (isSectionDirty[1])
-                {
-                    IMG_TrashB.Source = null;
-                    isSectionDirty[1] = false;
-                    trash++;
-                }
-            }
-
-            if (time == 11) //if one minute passed
+            
+            time++;
+            
+            if (time == 60)
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
@@ -99,10 +106,9 @@ namespace Simulador_IA
                 }
                 dispatcherTimer.Stop();
             }
-            else
-            {
-                time++;
-            }
+            LBL_ElapsedTime.Content = Convert.ToString(time);
+            LBL_PerformanceRateCleaning.Content = Convert.ToString(trash);
+            LBL_PerformanceRateMovements.Content = Convert.ToString(movements);
         }
 
         private void buttonStart_Click(object sender, RoutedEventArgs e)
@@ -110,6 +116,9 @@ namespace Simulador_IA
             time = 0;
             trash = 0;
             movements = 0;
+            LBL_ElapsedTime.Content = "0";
+            LBL_PerformanceRateCleaning.Content = "0";
+            LBL_PerformanceRateMovements.Content = "0";
             dispatcherTimer.Start();
         }
         private void buttonScore_Click(object sender, RoutedEventArgs e)
@@ -117,11 +126,13 @@ namespace Simulador_IA
             // Instantiate window
             Window1 dialogBox = new Window1();
             // Show window modally
-            Nullable<bool> dialogResult = dialogBox.ShowDialog();
+            dialogBox.ShowDialog();
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            //Opens a windows with the description about and Authors
+            About dialogBox = new About();
+            dialogBox.ShowDialog();
         }
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {

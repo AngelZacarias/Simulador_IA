@@ -48,3 +48,7 @@ C:\Users\geraa\Documents\CUCEI\7mo\IA\Simulador_IA\Simulador_IA\obj\Debug\Simula
 C:\Users\geraa\Documents\CUCEI\7mo\IA\Simulador_IA\Simulador_IA\obj\Debug\Simulador_IA.pdb
 C:\Users\geraa\Documents\CUCEI\7mo\IA\Simulador_IA\Simulador_IA\obj\Debug\Window1.g.cs
 C:\Users\geraa\Documents\CUCEI\7mo\IA\Simulador_IA\Simulador_IA\obj\Debug\Window1.baml
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Window1.g.cs
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\Window1.baml
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\About.g.cs
+C:\Users\angel\Documents\Simulador_IA\Simulador_IA\obj\Debug\About.baml

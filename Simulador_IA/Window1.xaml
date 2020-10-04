@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simulador_IA"
         mc:Ignorable="d"
-        Title="Window1" Height="510.8" Width="357.6" WindowStyle="None" >
-    <Grid Width="350" Height="500">
-        <DataGrid x:Name="DataGridScore" Height="340" Margin="10,65,10,0" VerticalAlignment="Top" Foreground="#FF134183">
+        Title="Window1" Height="538.8" Width="357.6" WindowStyle="None" >
+    <Grid Width="350" Margin="0,10,0,2">
+        <DataGrid x:Name="DataGridScore" Height="340" Margin="10,65,10,0" VerticalAlignment="Top" Foreground="#FF134183" SelectionChanged="DataGridScore_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Movements" IsReadOnly="True" Binding="{Binding Path=Movements}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="Trash" IsReadOnly="True" Binding="{Binding Path=Trash}" Width="150"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Score" Margin="143,10,143,0" VerticalAlignment="Top" Height="37" FontSize="20" FontWeight="Bold" Foreground="#FF134183"/>
-        <Label x:Name="LBL_Movements" Content="Movements Average:" HorizontalAlignment="Left" Margin="4,416,0,0" VerticalAlignment="Top" Width="157" Foreground="#FF134183"/>
-        <Label x:Name="LBL_Trash" Content="Trash Average:" HorizontalAlignment="Left" Margin="183,416,0,0" VerticalAlignment="Top" Width="157" Foreground="#FF134183"/>
+        <Label Content="Scores and Analytics" Margin="10,10,10,0" VerticalAlignment="Top" Height="37" FontSize="20" FontWeight="Bold" Foreground="#FF134183" HorizontalAlignment="Center"/>
+        <Label x:Name="LBL_Movements" Content="" HorizontalAlignment="Left" Margin="10,416,0,0" VerticalAlignment="Top" Width="141" Foreground="#FF134183" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="LBL_Trash" Content="" HorizontalAlignment="Left" Margin="198,416,0,0" VerticalAlignment="Top" Width="141" Foreground="#FF134183" HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold"/>
         <Button x:Name="BTN_Close" Content="Close" Margin="4,0,10,10" Click="buttonClose_Click" BorderBrush="White" FontFamily="Open Sans" Foreground="#FF134183" FontSize="20" Background="{x:Null}" Height="36" VerticalAlignment="Bottom"/>
+        <Label x:Name="LBL_LegendMovements" Content="Movements Average" HorizontalAlignment="Left" Foreground="#FF134183" FontFamily="Open Sans" Height="23" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Width="141" FontSize="9" Margin="10,0,0,59"/>
+        <Label x:Name="LBL_LegendMovements_Copy" Content="Cleaned Trashs Average" HorizontalAlignment="Left" Foreground="#FF134183" FontFamily="Open Sans" Height="23" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Width="141" FontSize="9" Margin="198,0,0,59"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Simulador_IA.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simulador_IA"
+        mc:Ignorable="d"
+        Title="About" Height="535.5" Width="446" WindowStyle="None">
+    <Grid Margin="0,0,0,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="124" Margin="95,9,0,0" VerticalAlignment="Top" Width="250" Source="UdeG.jpg"/>
+        <Label x:Name="LBL_Legend" Content="How Does It Works?" HorizontalAlignment="Center" Margin="10,0,10,355" Foreground="#FF134183" FontFamily="Open Sans" FontWeight="Bold" Height="33" VerticalAlignment="Bottom" FontSize="16" Width="412" HorizontalContentAlignment="Center"/>
+        <Label x:Name="LBL_LegendMovements" Content="This is a reactive agent simulator. &#xD;&#xA;&#xD;&#xA;In the main screen are two different sections delimited by squares, our &#xD;&#xA;vacuum cleaner bot will be inspecting these sections in intervals of &#xD;&#xA;5 seconds during 1 minute per simulation.&#xD;&#xA;&#xD;&#xA;If our bot finds a paper ball when arrives to the section, the bot will &#xD;&#xA;clean the ball and wait for five seconds to move to another section.&#xD;&#xA;&#xD;&#xA;We storage the movements and the paper balls cleaned by our bot &#xD;&#xA;in every simulation, you canfind more information and analytics in &#xD;&#xA;the &quot;Score&quot; window.&#xD;&#xA;&#xD;&#xA;Thanks!" Foreground="#FF134183" FontFamily="Open Sans" Height="247" VerticalAlignment="Bottom" HorizontalContentAlignment="Stretch" Width="412" Margin="15,0,5,103"/>
+        <Label x:Name="LBL_Legend_Copy" Content="Developed By:" HorizontalAlignment="Center" Margin="10,0,10,56" Foreground="#FF134183" FontFamily="Open Sans" FontWeight="Bold" Height="28" VerticalAlignment="Bottom" Width="412"/>
+        <Label x:Name="LBL_LegendMovements_Copy" Content="Julio Antonio Gónzalez Martín&#xD;&#xA;Gerardo Vazquez Martínez&#xD;&#xA;Luis Angel Zacarias Magaña" HorizontalAlignment="Left" Foreground="#FF134183" FontFamily="Open Sans" Height="46" VerticalAlignment="Bottom" HorizontalContentAlignment="Stretch" Width="219" FontSize="9" Margin="10,0,0,18"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="347,475,0,0" VerticalAlignment="Top" Width="75" Background="White" Foreground="#FF134183" FontFamily="Open Sans" FontSize="20" BorderBrush="White" Click="Close_Click"/>
+
+    </Grid>
+</Window>

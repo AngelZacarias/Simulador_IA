@@ -43,8 +43,13 @@ namespace Simulador_IA
                     count++;
                 }
             }
-            LBL_Movements.Content = "Movements Average: " + (movements / count).ToString();
-            LBL_Trash.Content = "Trash Average: " + (trash / count).ToString();
+            LBL_Movements.Content = Convert.ToString(movements / count);
+            LBL_Trash.Content = Convert.ToString(trash / count);
+        }
+
+        private void DataGridScore_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         public class Score
